@@ -1,23 +1,26 @@
-# Word Analyzer - EC530 Project 1
+# Project2: Patient Care API
 
-## Description
-word.py provides a module that can read a document and create a histogram of word frequency in the document (word frequency means the number of times each word appeared in the document).
-
-
-## Input
-- Text File (.txt) in the same directory
+## Overview
+Implement a healthcare application one module at a time.  My branching strategy is to develop modules (i.e. device modules) in separate branches, and once these modules have been tested, they will be merged with the main branch. The final project will be completed in the main branch.
 
 
-## Unit Test
-- Empty text file
-- Wrong file format
-- File not found
+## Module
+In this module, the task is to define an interface, the patient application of equipment can be through the interface to the data of intake system 
+The received data is checked for any errors and pushed to the data management module for storage in the master database.
 
-## Output Sample
 
-![avatar](pic/11.png)
+## User Story
+Administrator:
+Add users to the system
+Assign and change roles of users
+Provide interfaces for third-party medical device manufacturers (thermometers, pulse, blood pressure, glucometers, etc.) to allow their devices to provide data to the system 
+Ability to disable or enable any device manufacturer or application developer
 
-![avatar](pic/2.png)
+Medical Professional:
+Browse the patients 
+Assign medical equipment to patients
+Enter medical data for patients
+Chat with patients
+View reserved appointments
 
-Use word_test.py to test the correction.
-![avatar](pic/3.png)
+
