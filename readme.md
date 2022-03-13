@@ -11,16 +11,26 @@ The received data is checked for any errors and pushed to the data management mo
 
 ## User Story
 Administrator:
+
 Add users to the system
+
 Assign and change roles of users
+
 Provide interfaces for third-party medical device manufacturers (thermometers, pulse, blood pressure, glucometers, etc.) to allow their devices to provide data to the system 
+
 Ability to disable or enable any device manufacturer or application developer
 
+
 Medical Professional:
+
 Browse the patients 
+
 Assign medical equipment to patients
+
 Enter medical data for patients
 Chat with patients
 View reserved appointments
 
-
+## Device Module
+### Database schema
+![avatar](pic/1.png)
