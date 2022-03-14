@@ -1,0 +1,2 @@
+{"new_user": {"First_Name": "XX", "Last_Name": "X", "Gender": "Male", "Role": "Patient", "Phone": "9998887777", "Date_of_Birth": "2000-02-13", "Height_in_cm": 178, "Weight_in_kg": 70},
+"update_user": {"U_ID": 5, "Phone": "1111111111", "Height_in_cm": 178, "Weight_in_kg": 60}}
