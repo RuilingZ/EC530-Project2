@@ -13,9 +13,9 @@ def test_select_user(id, output):
     assert str(user) == output
 
 @pytest.mark.parametrize('fn, ln, gender, role, phone, dob, h, w, output',
-                         [('DD', 'D', 'Female', 'Patient', '2222223333', '1999-10-15', 175, 55, 5),
-                          ('EE', 'E', 'M', 'Doctor', '3333332222', '1998-11-22', 175, 60, None),
-                          ('EE', 'E', 'Male', 'D', '3333332222', '1998-11-22', 175, 60, None)])
+                         [('Clare', 'C', 'Female', 'Nurse', '0000011111', '1998-07-18', 165, 50, 5),
+                          ('David', 'D', 'Male', 'Patient', '1111100000', '2001-12-16', 185, 75, None),
+                          ('Eve', 'E', 'Female', 'Patient', '9098776532', '2001-09-01', 185, 75, None)])
 def test_insert_user(fn, ln, gender, role, phone, dob, h, w, output):
     conn = dm.create_connection(db_dir)
     last_id = dm.insert_user(conn, fn, ln, gender, role, phone, dob, h, w)
@@ -34,9 +34,9 @@ def test_delete_user(id, output):
     assert last_id == output
 
 @pytest.mark.parametrize('id, phone, h, w, output',
-                         [('4', '1112223333', 180, 72, "(4, 'CC', 'C', 'Male', 'Patient', '1112223333', '2000-11-06', 180, 72)"),
-                          ('4', '1111100000', 180, 80, "(4, 'CC', 'C', 'Male', 'Patient', '1111100000', '2000-11-06', 180, 80)"),
-                          ('5', '1111100000', 180, 80, 'None')])
+                         [('4', '1112223333', 180, 72, "(4, 'Clare', 'C', 'Female', 'Nurse', '0000011111', '1998-07-18', 180, 72)"),
+                          ('4', '1111100000', 180, 80, "(4, 'Clare', 'C', 'Female', 'Nurse', '0000011111', '1998-07-18', 180, 80)"),
+                          ('5', '9098776532', 180, 80, 'None')])
 def test_update_user(id, phone, h, w, output):
     conn = dm.create_connection(db_dir)
     user = dm.update_user(conn, id, phone, h, w)
